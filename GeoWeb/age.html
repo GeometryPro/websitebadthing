@@ -1,0 +1,14 @@
+<h2>I am <span id="age">undefined</span> years old. I'm trying to be a developer I guess.</h2>
+
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+<script>
+
+window.onload = function age(){
+    let ageEl = document.getElementById("age");
+
+    setInterval(() => {
+	    let time = dayjs().diff(dayjs(1176696000000), 'year', true);
+	    ageEl.innerText = time.toString().substring(0, 12);
+    }, 50);
+}
+</script>
